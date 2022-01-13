@@ -1,0 +1,42 @@
+name: Continuous Test - User Information
+ 
+on:
+  push:
+    paths:
+      - '*'
+    branches:
+      - master
+  pull_request:
+    paths:
+      - '*'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+ 
+    strategy:
+      matrix:
+        node-version: [14.x]
+       
+    steps:
+      - uses: actions/checkout@v2
+ 
+      - name: Use Node.js ${{ matrix.node-version }}      
+        uses: actions/setup-node@v1
+       
+      - name: Install newman
+        run: |
+          npm install -g newman
+ 
+      # - name: Make Directory for Test Results
+      #   run: mkdir -p testArtifacts
+ 
+      - name: Run Postman Collection  
+        run: |
+          make test
+     
+      # # Upload the reports to TestArtifacts directory
+      # - name: Output the results
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #    name: Reports
+      #    path: testArtifacts
