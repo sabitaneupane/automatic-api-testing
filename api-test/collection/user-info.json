@@ -20,7 +20,7 @@
 							"pm.environment.set(\"Registertoken\", token);\r",
 							"\r",
 							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(00);\r",
+							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
 							"pm.test(\"Response time is less than 500ms\", function () {\r",
