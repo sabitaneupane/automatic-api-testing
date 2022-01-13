@@ -20,7 +20,7 @@
 							"pm.environment.set(\"Registertoken\", token);\r",
 							"\r",
 							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.have.status(00);\r",
 							"});\r",
 							"\r",
 							"pm.test(\"Response time is less than 500ms\", function () {\r",
@@ -75,7 +75,7 @@
 							"});\r",
 							"\r",
 							"pm.test(\"Response time is less than 500ms\", function () {\r",
-							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(50);\r",
 							"});\r",
 							""
 						],
@@ -218,7 +218,7 @@
 						"exec": [
 							"pm.test(\"Proper response message is shown\", function () {\r",
 							"    pm.response.to.have.body({\r",
-							"        \"error\": \"Missing password\"\r",
+							"        \"error\": \"Missing\"\r",
 							"    });\r",
 							"});\r",
 							"\r",
