@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Register user - Happy Path",
+			"name": "Register .. user - Happy Path",
 			"event": [
 				{
 					"listen": "test",
